@@ -1,0 +1,5 @@
+# this is my ignore file with a nice comment at the top
+/views/*
+/public/*     # ignore changes in public directory
+/temp/*   # ignore changes in temp directory
+*.log   #ignore log files

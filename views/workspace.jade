@@ -1,0 +1,110 @@
+doctype html
+//- TODO: Don't forget to set lang !!
+//if lt IE 7
+  |<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+//if IE 7
+  |<html class="no-js lt-ie9 lt-ie8">
+//if IE 8
+  |<html class="no-js lt-ie9">
+//if gt IE 8
+  |<!--><html class="no-js"><!--
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  title=title
+  meta(name='description', content='')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(rel="stylesheet", type="text/css", href="stylesheets/workspace.min.css")
+body
+  div.container
+    header
+      div.menu-toggle
+        a(href="/")
+          div.toggle
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+      //- div.users
+      //-   div.add-new-user.glyphicon.glyphicon-user
+      //-   div.user-bubble.active
+      //-   div.user-bubble
+      //-   div.user-bubble.active
+    nav.canvas-tools
+      div.colors
+        span(data-color="rgba(0,0,0,0)")
+        span(data-color="#ffffff")
+        span(data-color="#000000")
+        span(data-color="#ff1122")
+        span(data-color="#2ce6cb")
+        span(data-color="#071921")
+        span(data-color="#bada55")
+        span(data-color="#d5a6fe")
+        span(data-color="#acfc05")
+        span(data-color="#fb9806")
+        span(data-color="#dbf5b8")
+        span(data-color="#3e8b89")
+        span(data-color="#f69a27")
+        span(data-color="#52efe0")
+        span(data-color="#cb8c74")
+        span(data-color="#0f1a35")
+        span(data-color="#a31346")
+        span(data-color="#6fd7af")
+      hr
+      div.tools
+        span(data-tool="freeDraw", title="Free draw").free-draw
+          i
+        span(data-tool="drawRect", title="Draw rectangle").rectangle
+          i
+        span(data-tool="drawCircle", title="Draw circle").circle
+          i
+        span(data-tool="drawTriangle", title="Draw triangle").triangle
+          i
+        span(data-tool="drawLine", title="Draw line").line 
+          i
+      hr
+      div.actions
+        span(data-action="fill", title="Fill shape").fill
+          i
+        span(data-action="border", title="Add border").border
+          i
+        span(data-action="bring-front", title="Bring front").bring-front
+          i
+        span(data-action="push-back", title="Push back").push-back
+          i
+        span(data-action="remove", title="Remove item").remove
+          i
+      hr
+      div.stock-items
+        div.item-stk
+          img(src="images/bubble1.png",data-large="images/bubble1-large.png", data-tool="drawImg", alt="Insert bubble 1").elem-img
+        div.item-stk
+          img(src="images/bubble2.png",data-large="images/bubble2-large.png", data-tool="drawImg", alt="Insert bubble 2").elem-img
+        div.item-stk
+          img(src="images/man.png",data-large="images/man-large.png", data-tool="drawImg", alt="Insert bubble 2").elem-img
+        div.item-stk
+          img(src="images/femeie.png",data-large="images/femeie-large.png", data-tool="drawImg", alt="Insert bubble 2").elem-img
+        div.item-stk
+          img(src="images/running.png",data-large="images/running-large.png", data-tool="drawImg", alt="Insert bubble 2").elem-img
+        div.item-stk
+          img(src="images/phone.png",data-large="images/phone-large.png", data-tool="drawImg", alt="Insert bubble 2").elem-img
+        div.item-stk
+          img(src="images/ipad.png",data-large="images/ipad-large.png", data-tool="drawImg", alt="Insert bubble 2").elem-img
+        div.item-stk
+          img(src="images/laptop.png",data-large="images/laptop-large.png", data-tool="drawImg", alt="Insert bubble 2").elem-img
+
+    div.workspace-area
+      div.canvas-wrapper
+        canvas(width="800px", height="500px")#canvas
+      footer
+        button.new-slide.glyphicon.glyphicon-plus
+        div.slides
+          ul
+            li.slide#page1
+
+  script(src="/javascripts/jquery-2.0.3.min.js")
+  script(src="/javascripts/bootstrap.min.js")
+  script(src="/socket.io/socket.io.js")
+  script(src="/javascripts/fabric.min.js")
+  script(src="/javascripts/sly.min.js")
+  script(src="/javascripts/workspace.js")
+

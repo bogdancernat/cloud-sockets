@@ -1,0 +1,184 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wrap {
+  position: relative;
+  // margin: 3em 0;
+  width: 100%;
+  top: 10%;
+  height: 90%;
+}
+
+/* Frame */
+.frame {
+  height: 75%;
+  // line-height: 250px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.frame ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  // width: 100%;
+  height: 100%;
+  // font-size: 50px;
+}
+.frame ul li {
+  float: left;
+  width: 800px;
+  height: 500px;
+  margin: 0 1px 0 0;
+  padding: 0;
+  background: #333;
+  color: #ddd;
+  text-align: center;
+  cursor: pointer;
+} 
+.frame ul li.active {
+  color: #000;
+  background: #ffffff;
+  box-shadow: 0px 0px 3px darkslategray;
+}
+
+/* Scrollbar */
+.scrollbar {
+  // margin: 0 0 1em 0;
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  line-height: 0;
+  position: absolute;
+  bottom:  15%;
+}
+.scrollbar .handle {
+  width: 100px;
+  height: 100%;
+  background: #292a33;
+  cursor: pointer;
+}
+.scrollbar .handle .mousearea {
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+.controls { 
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 3%;
+  height: 40px;
+  .move-slides {
+    height: 100%;
+    width: 220px;
+    margin: 0 auto;
+    margin-left: 65px;
+    .toStart {
+      float: left;
+      position: relative;
+      width: 55px;
+      height: 40px;
+      left: 0;
+      right: 0;
+      font-size: 1.5em;
+    }
+    .toEnd {
+       float: left;
+      position: relative;
+      width: 55px;
+      height: 40px;
+      left: 0;
+      right: 0;
+      font-size: 1.5em;
+    }
+    .toLeft {
+       float: left;
+      position: relative;
+      width: 55px;
+      height: 40px;
+      left: 0;
+      right: 0;
+      font-size: 1.5em;
+    }
+    .toRight {
+       float: left;
+      position: relative;
+      width: 55px;
+      height: 40px;
+      left: 0;
+      right: 0;
+      font-size: 1.5em;
+    }
+  }
+  .toFullScreen {
+    text-align: center;
+    width: 55px;
+    height: 40px;
+    font-size: 1.5em;
+    float: right;
+    margin-right: 10px;
+  }
+  .toHome {
+    text-align: center;
+    width: 55px;
+    height: 40px;
+    font-size: 1.5em;
+    float: left;
+    margin-left: 10px;
+  }
+}
+
+/* Controls */
+
+/* One Item Per Frame example*/
+// .oneperframe { height: 300px; line-height: 300px; }
+// .oneperframe ul li { width: 1140px; }
+// .oneperframe ul li.active { background: #333; }
+
+/* Crazy example */
+// .crazy ul li:nth-child(2n) { width: 100px; margin: 0 4px 0 20px; }
+// .crazy ul li:nth-child(3n) { width: 300px; margin: 0 10px 0 5px; }
+// .crazy ul li:nth-child(4n) { width: 400px; margin: 0 30px 0 2px; }
+
+/* Effects */
+// .effects {
+//   height: 400px;
+//   line-height: 400px;
+//   -webkit-perspective: 800px;
+//   -ms-perspective: 800px;
+//   perspective: 800px;
+//   -webkit-perspective-origin: 50% 50%;
+//   -ms-perspective-origin: 50% 50%;
+//   perspective-origin: 50% 50%;
+//   overflow-y: show;
+// }
+.effects ul {
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.effects ul li {
+  position: relative;
+  margin: 0 -20px;
+  -webkit-transform: rotateY(60deg) scale(0.9);
+  -ms-transform: rotateY(60deg) scale(0.9);
+  transform: rotateY(60deg) scale(0.9);
+  -webkit-transition: -webkit-transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+}
+.effects ul li.active {
+  z-index: 10;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.effects ul li.active ~ li {
+  -webkit-transform: rotateY(-60deg) scale(0.9);
+  -ms-transform: rotateY(-60deg) scale(0.9);
+  transform: rotateY(-60deg) scale(0.9);
+}
