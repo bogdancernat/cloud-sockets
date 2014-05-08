@@ -5,7 +5,7 @@ $(document).ready(function(){
   var mySocket
     , lastId = 0
     , canvasObjects = {}
-    , socket = io.connect('http://localhost')
+    , socket = io.connect('http://'+window.location.hostname)
     , canvas = new fabric.Canvas('canvas',{
         width: 800,
         height: 500,
